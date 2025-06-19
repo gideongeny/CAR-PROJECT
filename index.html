@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KenyaMotors - Find Your Dream Car</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .car-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .car-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    @media (max-width: 600px) {
+      .search-box {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="container nav">
+      <h1 class="logo">🚗 KenyaMotors</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#inventory">Inventory</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Find Your Dream Car in Kenya</h2>
+      <p>Quality vehicles at competitive prices</p>
+
+      <div class="search-box">
+        <select id="make">
+          <option value="">All Makes</option>
+        </select>
+        <select id="model">
+          <option value="">All Models</option>
+        </select>
+        <select id="price">
+          <option value="">Price Range</option>
+          <option value="10000">Below 10,000</option>
+          <option value="15000">Below 15,000</option>
+          <option value="20000">Below 20,000</option>
+        </select>
+        <button onclick="searchCars()">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Vehicles -->
+  <section class="featured">
+    <h2>Featured Vehicles</h2>
+    <p>Explore our premium selection of quality cars</p>
+    <div class="car-grid" id="carGrid">
+      <!-- Car cards will be injected here -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 KenyaMotors. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const cars = [
+  { make: 'Toyota', model: 'Corolla', price: 1600000, img: 'images/Toyota Corolla.avif' },
+  { make: 'Nissan', model: 'X-Trail', price: 2100000, img: 'images/Nissan X-Trail.jpg' },
+  { make: 'Honda', model: 'Fit', price: 1350000, img: 'images/Honda Fit.jpg' },
+  { make: 'Mazda', model: 'Demio', price: 1200000, img: 'images/Mazda Demio.jpg' },
+  { make: 'BMW', model: '320i', price: 3500000, img: 'images/BMW 320i.jpg' },
+  { make: 'Subaru', model: 'Forester', price: 2500000, img: 'images/Subaru Forester.avif' },
+  { make: 'Toyota', model: 'Rav4', price: 2700000, img: 'images/toyota-rav4.jpg' },
+  { make: 'Nissan', model: 'Note', price: 1100000, img: 'images/nissan-note.jpg' },
+  { make: 'Honda', model: 'Civic', price: 2300000, img: 'images/honda-civic.jpg' },
+  { make: 'Mazda', model: 'Axela', price: 1900000, img: 'images/mazda-axela.jpg' },
+  { make: 'BMW', model: 'X5', price: 7000000, img: 'images/bmw-x5.jpg' },
+  { make: 'Subaru', model: 'Impreza', price: 1900000, img: 'images/subaru-impreza.jpg' },
+  { make: 'Toyota', model: 'Premio', price: 1800000, img: 'images/toyota-premio.jpg' },
+  { make: 'Nissan', model: 'Juke', price: 1600000, img: 'images/nissan-juke.jpg' },
+  { make: 'Honda', model: 'Insight', price: 1400000, img: 'images/honda-insight.jpg' },
+  { make: 'Mazda', model: 'CX-5', price: 3300000, img: 'images/mazda-cx5.jpg' },
+  { make: 'BMW', model: 'Z4', price: 6800000, img: 'images/bmw-z4.jpg' },
+  { make: 'Subaru', model: 'Outback', price: 3100000, img: 'images/subaru-outback.jpg' },
+  { make: 'Toyota', model: 'Land Cruiser', price: 8500000, img: 'images/toyota-landcruiser.jpg' },
+  { make: 'Nissan', model: 'Serena', price: 1700000, img: 'images/nissan-serena.jpg' },
+  { make: 'Honda', model: 'CR-V', price: 2900000, img: 'images/honda-crv.jpg' },
+  { make: 'Mazda', model: 'BT-50', price: 3200000, img: 'images/mazda-bt50.jpg' },
+  { make: 'BMW', model: 'X3', price: 5400000, img: 'images/bmw-x3.jpg' },
+  { make: 'Subaru', model: 'Legacy', price: 2200000, img: 'images/subaru-legacy.jpg' },
+  { make: 'Toyota', model: 'Hilux', price: 4300000, img: 'images/toyota-hilux.jpg' },
+  { make: 'Nissan', model: 'Teana', price: 1600000, img: 'images/nissan-teana.jpg' },
+  { make: 'Honda', model: 'Accord', price: 2600000, img: 'images/honda-accord.jpg' },
+  { make: 'Mazda', model: '6', price: 2100000, img: 'images/mazda-6.jpg' },
+  { make: 'BMW', model: '1 Series', price: 2800000, img: 'images/bmw-1series.jpg' },
+  { make: 'Subaru', model: 'BRZ', price: 4000000, img: 'images/subaru-brz.jpg' }
+];
+        
+
+    function populateFilters() {
+      const makes = [...new Set(cars.map(c => c.make))];
+      const models = [...new Set(cars.map(c => c.model))];
+
+      const makeSelect = document.getElementById('make');
+      const modelSelect = document.getElementById('model');
+
+      makes.forEach(make => {
+        const option = document.createElement('option');
+        option.value = make;
+        option.textContent = make;
+        makeSelect.appendChild(option);
+      });
+
+      models.forEach(model => {
+        const option = document.createElement('option');
+        option.value = model;
+        option.textContent = model;
+        modelSelect.appendChild(option);
+      });
+    }
+
+    function loadCars(filteredCars = cars) {
+      const grid = document.getElementById('carGrid');
+      grid.innerHTML = '';
+      filteredCars.forEach(car => {
+        const card = document.createElement('div');
+        card.className = 'car-card';
+        card.innerHTML = `
+          <img src="${car.img}" alt="${car.make} ${car.model}">
+          <h3>${car.make} ${car.model}</h3>
+          <p>Price: KES ${car.price.toLocaleString()}</p>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function searchCars() {
+      const make = document.getElementById('make').value;
+      const model = document.getElementById('model').value;
+      const price = parseInt(document.getElementById('price').value);
+
+      const filtered = cars.filter(car => {
+        return (
+          (make === '' || car.make === make) &&
+          (model === '' || car.model === model) &&
+          (isNaN(price) || car.price <= price)
+        );
+      });
+
+      loadCars(filtered);
+    }
+
+    window.onload = () => {
+      populateFilters();
+      loadCars();
+    };
+  </script>
+</body>
+</html>
