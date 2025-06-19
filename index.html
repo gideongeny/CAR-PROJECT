@@ -30,6 +30,41 @@
         flex-direction: column;
       }
     }
+    .about, .contact, .inventory {
+      padding: 2rem;
+      background: #f8f8f8;
+    }
+    .about h2, .contact h2, .inventory h2 {
+      color: #222;
+      margin-bottom: 1rem;
+    }
+    .about p, .contact p, .inventory p {
+      color: #444;
+      line-height: 1.6;
+    }
+    form {
+      max-width: 400px;
+      margin: 1rem 0;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button[type="submit"] {
+      background: #007bff;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button[type="submit"]:hover {
+      background: #0056b3;
+    }
   </style>
 </head>
 <body>
@@ -72,6 +107,34 @@
     </div>
   </section>
 
+  <!-- Inventory Section -->
+  <section id="inventory" class="inventory">
+    <h2>Car Inventory</h2>
+    <p>Our full collection of vehicles available for sale in Kenya.</p>
+    <div class="car-grid" id="carGrid">
+      <!-- Car cards are reused here -->
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <h2>About KenyaMotors</h2>
+    <p>KenyaMotors is your trusted partner in finding high-quality, affordable cars across Kenya. We bring you a wide range of new and used vehicles sourced locally and internationally. With an emphasis on transparency, reliability, and service excellence, we strive to help you drive your dream car today.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>We’re here to help! Reach out via the form below or visit our showroom.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Email: support@kenyamotors.co.ke | Phone: +254 720 317626</p>
+  </section>
+
   <!-- Featured Vehicles -->
   <section class="featured">
     <h2>Featured Vehicles</h2>
@@ -89,12 +152,12 @@
   <!-- JS -->
   <script>
     const cars = [
-  { make: 'Toyota', model: 'Corolla', price: 1600000, img: 'images/Toyota Corolla.avif' },
-  { make: 'Nissan', model: 'X-Trail', price: 2100000, img: 'images/Nissan X-Trail.jpg' },
-  { make: 'Honda', model: 'Fit', price: 1350000, img: 'images/Honda Fit.jpg' },
-  { make: 'Mazda', model: 'Demio', price: 1200000, img: 'images/Mazda Demio.jpg' },
-  { make: 'BMW', model: '320i', price: 3500000, img: 'images/BMW 320i.jpg' },
-  { make: 'Subaru', model: 'Forester', price: 2500000, img: 'images/Subaru Forester.avif' },
+  { make: 'Toyota', model: 'Corolla', price: 1600000, img: 'images/Toyota Corolla.avif' }, 
+    { make: 'Nissan', model: 'X-Trail', price: 2100000, img: 'images/Nissan X-Trail.jpg' },  
+     { make: 'Honda', model: 'Fit', price: 1350000, img: 'images/Honda Fit.jpg' },  
+      { make: 'Mazda', model: 'Demio', price: 1200000, img: 'images/Mazda Demio.jpg' }, 
+        { make: 'BMW', model: '320i', price: 3500000, img: 'images/BMW 320i.jpg' },  
+         { make: 'Subaru', model: 'Forester', price: 2500000, img: 'images/Subaru Forester.avif' },
   { make: 'Toyota', model: 'Rav4', price: 2700000, img: 'images/toyota-rav4.jpg' },
   { make: 'Nissan', model: 'Note', price: 1100000, img: 'images/nissan-note.jpg' },
   { make: 'Honda', model: 'Civic', price: 2300000, img: 'images/honda-civic.jpg' },
