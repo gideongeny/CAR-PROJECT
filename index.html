@@ -3,245 +3,698 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KenyaMotors - Find Your Dream Car</title>
+  <meta name="description" content="KenyaMotors - Your trusted car dealership in Kenya. Find quality new and used vehicles with competitive financing options and professional service.">
+  <meta name="keywords" content="car dealership kenya, used cars kenya, new cars kenya, car financing kenya, toyota kenya, nissan kenya, honda kenya">
+  <meta name="author" content="KenyaMotors">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kenyamotors.co.ke/">
+  <meta property="og:title" content="KenyaMotors - Find Your Dream Car in Kenya">
+  <meta property="og:description" content="Quality vehicles at competitive prices with professional service and financing options.">
+  <meta property="og:image" content="https://kenyamotors.co.ke/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kenyamotors.co.ke/">
+  <meta property="twitter:title" content="KenyaMotors - Find Your Dream Car in Kenya">
+  <meta property="twitter:description" content="Quality vehicles at competitive prices with professional service and financing options.">
+  <meta property="twitter:image" content="https://kenyamotors.co.ke/images/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  
+  <title>KenyaMotors - Find Your Dream Car in Kenya | Quality Vehicles & Financing</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="script.js" as="script">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css"/>
-  <style>
-    .car-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-    .car-card {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .car-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-    }
-    @media (max-width: 600px) {
-      .search-box {
-        flex-direction: column;
-      }
-    }
-    .about, .contact, .inventory {
-      padding: 2rem;
-      background: #f8f8f8;
-    }
-    .about h2, .contact h2, .inventory h2 {
-      color: #222;
-      margin-bottom: 1rem;
-    }
-    .about p, .contact p, .inventory p {
-      color: #444;
-      line-height: 1.6;
-    }
-    form {
-      max-width: 400px;
-      margin: 1rem 0;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button[type="submit"] {
-      background: #007bff;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    button[type="submit"]:hover {
-      background: #0056b3;
-    }
-  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "KenyaMotors",
+    "description": "Professional car dealership in Kenya offering quality vehicles and financing options",
+    "url": "https://kenyamotors.co.ke",
+    "telephone": "+254 720 317626",
+    "email": "support@kenyamotors.co.ke",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KE",
+      "addressLocality": "Nairobi"
+    },
+    "sameAs": [
+      "https://facebook.com/kenyamotors",
+      "https://twitter.com/kenyamotors",
+      "https://instagram.com/kenyamotors"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <div class="container nav">
-      <h1 class="logo">🚗 KenyaMotors</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#inventory">Inventory</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="#" aria-label="KenyaMotors Home">
+            <i class="fas fa-car"></i>
+            <span>KenyaMotors</span>
+          </a>
+        </div>
+        
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fas fa-bars"></i>
+          </button>
+          
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#inventory" class="nav-link">Inventory</a></li>
+            <li><a href="#financing" class="nav-link">Financing</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn btn-outline" aria-label="Search vehicles">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="btn btn-primary" aria-label="Schedule test drive">
+            <i class="fas fa-calendar"></i>
+            <span class="btn-text">Test Drive</span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Find Your Dream Car in Kenya</h2>
-      <p>Quality vehicles at competitive prices</p>
-
-      <div class="search-box">
-        <select id="make">
-          <option value="">All Makes</option>
-        </select>
-        <select id="model">
-          <option value="">All Models</option>
-        </select>
-        <select id="price">
-          <option value="">Price Range</option>
-          <option value="10000">Below 10,000</option>
-          <option value="15000">Below 15,000</option>
-          <option value="20000">Below 20,000</option>
-        </select>
-        <button onclick="searchCars()">Search</button>
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="banner">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
       </div>
-    </div>
-  </section>
+      
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Find Your Dream Car in Kenya
+            <span class="hero-subtitle">Quality vehicles at competitive prices</span>
+          </h1>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Vehicles</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">Happy Customers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+          </div>
 
-  <!-- Inventory Section -->
-  <section id="inventory" class="inventory">
-    <h2>Car Inventory</h2>
-    <p>Our full collection of vehicles available for sale in Kenya.</p>
-    <div class="car-grid" id="carGrid">
-      <!-- Car cards are reused here -->
-    </div>
-  </section>
+          <!-- Advanced Search Form -->
+          <form class="search-form" role="search" aria-label="Vehicle search">
+            <div class="search-grid">
+              <div class="form-group">
+                <label for="make" class="form-label">Make</label>
+                <select id="make" name="make" class="form-select">
+                  <option value="">All Makes</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="model" class="form-label">Model</label>
+                <select id="model" name="model" class="form-select">
+                  <option value="">All Models</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="year" class="form-label">Year</label>
+                <select id="year" name="year" class="form-select">
+                  <option value="">Any Year</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="price-min" class="form-label">Price Range</label>
+                <div class="price-range">
+                  <input type="number" id="price-min" name="price-min" placeholder="Min" class="form-input">
+                  <span>to</span>
+                  <input type="number" id="price-max" name="price-max" placeholder="Max" class="form-input">
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="fuel-type" class="form-label">Fuel Type</label>
+                <select id="fuel-type" name="fuel-type" class="form-select">
+                  <option value="">Any Fuel</option>
+                  <option value="petrol">Petrol</option>
+                  <option value="diesel">Diesel</option>
+                  <option value="hybrid">Hybrid</option>
+                  <option value="electric">Electric</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="transmission" class="form-label">Transmission</label>
+                <select id="transmission" name="transmission" class="form-select">
+                  <option value="">Any Transmission</option>
+                  <option value="manual">Manual</option>
+                  <option value="automatic">Automatic</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="search-actions">
+              <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-search"></i>
+                Search Vehicles
+              </button>
+              <button type="button" class="btn btn-outline btn-large" id="advanced-search-toggle">
+                <i class="fas fa-sliders-h"></i>
+                Advanced Filters
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
-  <!-- About Us Section -->
-  <section id="about" class="about">
-    <h2>About KenyaMotors</h2>
-    <p>KenyaMotors is your trusted partner in finding high-quality, affordable cars across Kenya. We bring you a wide range of new and used vehicles sourced locally and internationally. With an emphasis on transparency, reliability, and service excellence, we strive to help you drive your dream car today.</p>
-  </section>
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+      <div class="container">
+        <div class="actions-grid">
+          <a href="#financing" class="action-card">
+            <i class="fas fa-calculator"></i>
+            <h3>Financing Calculator</h3>
+            <p>Calculate your monthly payments</p>
+          </a>
+          
+          <a href="#services" class="action-card">
+            <i class="fas fa-tools"></i>
+            <h3>Service Center</h3>
+            <p>Professional maintenance & repair</p>
+          </a>
+          
+          <a href="#contact" class="action-card">
+            <i class="fas fa-phone"></i>
+            <h3>Contact Us</h3>
+            <p>Get expert advice today</p>
+          </a>
+          
+          <a href="#inventory" class="action-card">
+            <i class="fas fa-car-side"></i>
+            <h3>Browse Inventory</h3>
+            <p>View our complete collection</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>We’re here to help! Reach out via the form below or visit our showroom.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required><br>
-      <input type="email" placeholder="Your Email" required><br>
-      <textarea placeholder="Your Message" required></textarea><br>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>Email: support@kenyamotors.co.ke | Phone: +254 720 317626</p>
-  </section>
+    <!-- Featured Vehicles -->
+    <section class="featured-vehicles">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Vehicles</h2>
+          <p>Explore our premium selection of quality cars</p>
+        </div>
+        
+        <div class="vehicles-grid" id="featuredVehicles">
+          <!-- Vehicles will be loaded here -->
+        </div>
+        
+        <div class="section-footer">
+          <button class="btn btn-outline btn-large" id="viewAllVehiclesBtn">
+            View All Vehicles
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
 
-  <!-- Featured Vehicles -->
-  <section class="featured">
-    <h2>Featured Vehicles</h2>
-    <p>Explore our premium selection of quality cars</p>
-    <div class="car-grid" id="carGrid">
-      <!-- Car cards will be injected here -->
-    </div>
-  </section>
+                      <!-- Full Inventory Section -->
+                  <section id="inventory" class="inventory">
+                    <div class="container">
+                      <div class="section-header">
+                        <h2>Our Complete Inventory</h2>
+                        <p>Browse through our extensive collection of quality vehicles</p>
+                      </div>
+
+                      <div class="search-results">
+                        <div class="search-results-count">1000 vehicles found</div>
+                      </div>
+
+                      <div class="vehicles-grid" id="carGrid">
+                        <!-- All vehicles will be loaded here -->
+                      </div>
+                      
+                      <div class="load-more-container" style="text-align: center; margin-top: 2rem;">
+                        <button class="btn btn-primary btn-large" id="loadMoreBtn" style="display: none;">
+                          <i class="fas fa-plus"></i>
+                          Load More Vehicles
+                        </button>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- Inventory Modal -->
+                  <div id="inventoryModal" class="modal">
+                    <div class="modal-content inventory-modal">
+                      <div class="modal-header">
+                        <h2>Complete Vehicle Inventory</h2>
+                        <button class="modal-close" aria-label="Close inventory">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="inventory-header">
+                          <div class="inventory-stats">
+                            <span class="total-cars">1000 Vehicles Available</span>
+                            <span class="showing-cars" id="showingCars">Showing 1-50</span>
+                          </div>
+                          <div class="inventory-actions">
+                            <button class="btn btn-outline" id="clearFiltersBtn">
+                              <i class="fas fa-filter"></i>
+                              Clear Filters
+                            </button>
+                          </div>
+                        </div>
+                        
+                        <div class="inventory-grid" id="inventoryModalGrid">
+                          <!-- Cars will be loaded here -->
+                        </div>
+                        
+                        <div class="load-more-container">
+                          <button class="btn btn-primary btn-large" id="modalLoadMoreBtn">
+                            <i class="fas fa-plus"></i>
+                            Load More Vehicles
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+    <!-- Financing Section -->
+    <section id="financing" class="financing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Financing Solutions</h2>
+          <p>Flexible payment options to fit your budget</p>
+        </div>
+        
+        <div class="financing-content">
+          <div class="financing-calculator">
+            <h3>Payment Calculator</h3>
+            <form class="calculator-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="vehicle-price">Vehicle Price (KES)</label>
+                  <input type="number" id="vehicle-price" class="form-input" value="2000000">
+                </div>
+                <div class="form-group">
+                  <label for="down-payment">Down Payment (KES)</label>
+                  <input type="number" id="down-payment" class="form-input" value="400000">
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="loan-term">Loan Term (Months)</label>
+                  <select id="loan-term" class="form-select">
+                    <option value="12">12 Months</option>
+                    <option value="24">24 Months</option>
+                    <option value="36" selected>36 Months</option>
+                    <option value="48">48 Months</option>
+                    <option value="60">60 Months</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="interest-rate">Interest Rate (%)</label>
+                  <input type="number" id="interest-rate" class="form-input" value="12" step="0.1">
+                </div>
+              </div>
+              
+              <button type="button" class="btn btn-primary" id="calculate-payment">
+                Calculate Payment
+              </button>
+            </form>
+            
+            <div class="payment-result" id="payment-result" style="display: none;">
+              <h4>Monthly Payment</h4>
+              <div class="payment-amount" id="monthly-payment">KES 0</div>
+              <div class="payment-breakdown">
+                <div class="breakdown-item">
+                  <span>Principal:</span>
+                  <span id="principal-amount">KES 0</span>
+                </div>
+                <div class="breakdown-item">
+                  <span>Interest:</span>
+                  <span id="interest-amount">KES 0</span>
+                </div>
+                <div class="breakdown-item">
+                  <span>Total Interest:</span>
+                  <span id="total-interest">KES 0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="financing-benefits">
+            <h3>Why Choose Our Financing?</h3>
+            <ul class="benefits-list">
+              <li><i class="fas fa-check"></i> Competitive interest rates</li>
+              <li><i class="fas fa-check"></i> Quick approval process</li>
+              <li><i class="fas fa-check"></i> Flexible payment terms</li>
+              <li><i class="fas fa-check"></i> No hidden fees</li>
+              <li><i class="fas fa-check"></i> Pre-approval available</li>
+            </ul>
+            
+            <div class="cta-buttons">
+              <button class="btn btn-primary">Apply Now</button>
+              <button class="btn btn-outline">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p>Comprehensive automotive solutions for your needs</p>
+        </div>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>Vehicle Sales</h3>
+            <p>New and used vehicles from trusted brands with comprehensive warranties.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Service & Maintenance</h3>
+            <p>Professional maintenance and repair services by certified technicians.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Warranty & Insurance</h3>
+            <p>Comprehensive warranty coverage and insurance solutions for peace of mind.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-exchange-alt"></i>
+            </div>
+            <h3>Trade-In</h3>
+            <p>Get the best value for your current vehicle with our trade-in program.</p>
+            <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>About KenyaMotors</h2>
+            <p class="lead">Your trusted partner in finding high-quality, affordable cars across Kenya.</p>
+            <p>KenyaMotors has been serving the Kenyan automotive market for over a decade, bringing you a wide range of new and used vehicles sourced locally and internationally. With an emphasis on transparency, reliability, and service excellence, we strive to help you drive your dream car today.</p>
+            
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Vehicles Sold</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">Happy Customers</span>
+              </div>
+            </div>
+            
+            <div class="about-actions">
+              <button class="btn btn-primary">Our Story</button>
+              <button class="btn btn-outline">Meet Our Team</button>
+            </div>
+          </div>
+          
+          <div class="about-image">
+            <img src="images/showroom.jpg" alt="KenyaMotors showroom" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Customers Say</h2>
+          <p>Real experiences from satisfied customers</p>
+        </div>
+        
+        <div class="testimonials-grid" id="testimonials">
+          <!-- Testimonials will be loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>We're here to help! Reach out via the form below or visit our showroom.</p>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Visit Our Showroom</h3>
+                <p>123 Mombasa Road, Nairobi, Kenya</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+254 720 317626</p>
+                <p>+254 733 123456</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>support@kenyamotors.co.ke</p>
+                <p>sales@kenyamotors.co.ke</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <form id="contactForm" class="form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <select id="subject" name="subject" class="form-select" required>
+                    <option value="">Select Subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="sales">Vehicle Sales</option>
+                    <option value="service">Service & Maintenance</option>
+                    <option value="financing">Financing</option>
+                    <option value="test-drive">Schedule Test Drive</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" class="form-checkbox">
+                  <span class="checkmark"></span>
+                  Subscribe to our newsletter for updates and special offers
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-large">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 KenyaMotors. All rights reserved.</p>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>KenyaMotors</h3>
+          <p>Your trusted partner in finding high-quality, affordable cars across Kenya.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#inventory">Vehicle Inventory</a></li>
+            <li><a href="#financing">Financing</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">New Vehicles</a></li>
+            <li><a href="#">Used Vehicles</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Service & Maintenance</a></li>
+            <li><a href="#">Trade-In</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Mombasa Road, Nairobi</p>
+          <p><i class="fas fa-phone"></i> +254 720 317626</p>
+          <p><i class="fas fa-envelope"></i> support@kenyamotors.co.ke</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 KenyaMotors. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/sitemap">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- JS -->
+  <!-- Modals -->
+  <div class="modal" id="vehicleModal" role="dialog" aria-labelledby="vehicleModalTitle" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="vehicleModalTitle">Vehicle Details</h2>
+        <button class="modal-close" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="vehicleModalBody">
+        <!-- Vehicle details will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
-    const cars = [
-  { make: 'Toyota', model: 'Corolla', price: 1600000, img: 'images/Toyota Corolla.avif' }, 
-    { make: 'Nissan', model: 'X-Trail', price: 2100000, img: 'images/Nissan X-Trail.jpg' },  
-     { make: 'Honda', model: 'Fit', price: 1350000, img: 'images/Honda Fit.jpg' },  
-      { make: 'Mazda', model: 'Demio', price: 1200000, img: 'images/Mazda Demio.jpg' }, 
-        { make: 'BMW', model: '320i', price: 3500000, img: 'images/BMW 320i.jpg' },  
-         { make: 'Subaru', model: 'Forester', price: 2500000, img: 'images/Subaru Forester.avif' },
-  { make: 'Toyota', model: 'Rav4', price: 2700000, img: 'images/toyota-rav4.jpg' },
-  { make: 'Nissan', model: 'Note', price: 1100000, img: 'images/nissan-note.jpg' },
-  { make: 'Honda', model: 'Civic', price: 2300000, img: 'images/honda-civic.jpg' },
-  { make: 'Mazda', model: 'Axela', price: 1900000, img: 'images/mazda-axela.jpg' },
-  { make: 'BMW', model: 'X5', price: 7000000, img: 'images/bmw-x5.jpg' },
-  { make: 'Subaru', model: 'Impreza', price: 1900000, img: 'images/subaru-impreza.jpg' },
-  { make: 'Toyota', model: 'Premio', price: 1800000, img: 'images/toyota-premio.jpg' },
-  { make: 'Nissan', model: 'Juke', price: 1600000, img: 'images/nissan-juke.jpg' },
-  { make: 'Honda', model: 'Insight', price: 1400000, img: 'images/honda-insight.jpg' },
-  { make: 'Mazda', model: 'CX-5', price: 3300000, img: 'images/mazda-cx5.jpg' },
-  { make: 'BMW', model: 'Z4', price: 6800000, img: 'images/bmw-z4.jpg' },
-  { make: 'Subaru', model: 'Outback', price: 3100000, img: 'images/subaru-outback.jpg' },
-  { make: 'Toyota', model: 'Land Cruiser', price: 8500000, img: 'images/toyota-landcruiser.jpg' },
-  { make: 'Nissan', model: 'Serena', price: 1700000, img: 'images/nissan-serena.jpg' },
-  { make: 'Honda', model: 'CR-V', price: 2900000, img: 'images/honda-crv.jpg' },
-  { make: 'Mazda', model: 'BT-50', price: 3200000, img: 'images/mazda-bt50.jpg' },
-  { make: 'BMW', model: 'X3', price: 5400000, img: 'images/bmw-x3.jpg' },
-  { make: 'Subaru', model: 'Legacy', price: 2200000, img: 'images/subaru-legacy.jpg' },
-  { make: 'Toyota', model: 'Hilux', price: 4300000, img: 'images/toyota-hilux.jpg' },
-  { make: 'Nissan', model: 'Teana', price: 1600000, img: 'images/nissan-teana.jpg' },
-  { make: 'Honda', model: 'Accord', price: 2600000, img: 'images/honda-accord.jpg' },
-  { make: 'Mazda', model: '6', price: 2100000, img: 'images/mazda-6.jpg' },
-  { make: 'BMW', model: '1 Series', price: 2800000, img: 'images/bmw-1series.jpg' },
-  { make: 'Subaru', model: 'BRZ', price: 4000000, img: 'images/subaru-brz.jpg' }
-];
-        
-
-    function populateFilters() {
-      const makes = [...new Set(cars.map(c => c.make))];
-      const models = [...new Set(cars.map(c => c.model))];
-
-      const makeSelect = document.getElementById('make');
-      const modelSelect = document.getElementById('model');
-
-      makes.forEach(make => {
-        const option = document.createElement('option');
-        option.value = make;
-        option.textContent = make;
-        makeSelect.appendChild(option);
-      });
-
-      models.forEach(model => {
-        const option = document.createElement('option');
-        option.value = model;
-        option.textContent = model;
-        modelSelect.appendChild(option);
-      });
-    }
-
-    function loadCars(filteredCars = cars) {
-      const grid = document.getElementById('carGrid');
-      grid.innerHTML = '';
-      filteredCars.forEach(car => {
-        const card = document.createElement('div');
-        card.className = 'car-card';
-        card.innerHTML = `
-          <img src="${car.img}" alt="${car.make} ${car.model}">
-          <h3>${car.make} ${car.model}</h3>
-          <p>Price: KES ${car.price.toLocaleString()}</p>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    function searchCars() {
-      const make = document.getElementById('make').value;
-      const model = document.getElementById('model').value;
-      const price = parseInt(document.getElementById('price').value);
-
-      const filtered = cars.filter(car => {
-        return (
-          (make === '' || car.make === make) &&
-          (model === '' || car.model === model) &&
-          (isNaN(price) || car.price <= price)
-        );
-      });
-
-      loadCars(filtered);
-    }
-
-    window.onload = () => {
-      populateFilters();
-      loadCars();
-    };
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
   </script>
 </body>
 </html>

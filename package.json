@@ -1,0 +1,23 @@
+{
+  "name": "kenyamotors-website",
+  "version": "2.0.0",
+  "description": "Professional car dealership website for KenyaMotors",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "npm run optimize-images && npm run minify-css && npm run minify-js",
+    "optimize-images": "imagemin images/* --out-dir=images/optimized",
+    "minify-css": "cleancss -o styles.min.css styles.css",
+    "minify-js": "uglifyjs script.js -o script.min.js"
+  },
+  "keywords": ["car dealership", "kenya", "automotive", "ecommerce"],
+  "author": "KenyaMotors",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "imagemin-cli": "^7.0.0",
+    "clean-css-cli": "^5.6.0",
+    "uglify-js": "^3.17.4"
+  }
+}
+
