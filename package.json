@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "live-server --port=3000",
-    "build": "npm run minify-css && npm run minify-js",
+    "build": "npm run minify-css && npm run minify-js && mkdir -p dist && cp index.html dist/ && cp styles.css dist/ && cp script.js dist/ && cp -r images dist/",
     "optimize-images": "imagemin images/* --out-dir=images/optimized",
     "minify-css": "cleancss -o styles.min.css styles.css",
     "minify-js": "uglifyjs script.js -o script.min.js"
