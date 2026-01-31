@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="KenyaMotors - Your trusted car dealership in Kenya. Find quality new and used vehicles with competitive financing options and professional service.">
-  <meta name="keywords" content="car dealership kenya, used cars kenya, new cars kenya, car financing kenya, toyota kenya, nissan kenya, honda kenya">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="KenyaMotors - Your trusted car dealership in Kenya. Find quality new and used vehicles with competitive financing options and professional service.">
+  <meta name="keywords"
+    content="car dealership kenya, used cars kenya, new cars kenya, car financing kenya, toyota kenya, nissan kenya, honda kenya">
   <meta name="author" content="KenyaMotors">
   <meta name="robots" content="index, follow">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kenyamotors.co.ke/">
   <meta property="og:title" content="KenyaMotors - Find Your Dream Car in Kenya">
-  <meta property="og:description" content="Quality vehicles at competitive prices with professional service and financing options.">
+  <meta property="og:description"
+    content="Quality vehicles at competitive prices with professional service and financing options.">
   <meta property="og:image" content="https://kenyamotors.co.ke/images/og-image.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://kenyamotors.co.ke/">
   <meta property="twitter:title" content="KenyaMotors - Find Your Dream Car in Kenya">
-  <meta property="twitter:description" content="Quality vehicles at competitive prices with professional service and financing options.">
+  <meta property="twitter:description"
+    content="Quality vehicles at competitive prices with professional service and financing options.">
   <meta property="twitter:image" content="https://kenyamotors.co.ke/images/og-image.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  
-  <title>KenyaMotors - Find Your Dream Car in Kenya | Quality Vehicles & Financing</title>
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="script.js" as="script">
-  
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
+  <<<<<<< HEAD <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    =======
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+    >>>>>>> ac33aa8 (feat: implement world-class branding, logo, and premium README)
+
+    <title>KenyaMotors - Find Your Dream Car in Kenya | Quality Vehicles & Financing</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "AutoDealer",
@@ -59,6 +68,7 @@
   }
   </script>
 </head>
+
 <body>
   <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -69,17 +79,20 @@
       <div class="header-content">
         <div class="logo">
           <a href="#" aria-label="KenyaMotors Home">
-            <i class="fas fa-car"></i>
-            <span>KenyaMotors</span>
+            <<<<<<< HEAD <i class="fas fa-car"></i>
+              =======
+              <img src="images/logo.png" alt="KenyaMotors Logo" style="height: 40px;">
+              >>>>>>> ac33aa8 (feat: implement world-class branding, logo, and premium README)
+              <span>KenyaMotors</span>
           </a>
         </div>
-        
+
         <nav class="nav" role="navigation" aria-label="Main navigation">
           <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
             <span class="sr-only">Toggle navigation</span>
             <i class="fas fa-bars"></i>
           </button>
-          
+
           <ul class="nav-menu" id="nav-menu">
             <li><a href="#home" class="nav-link">Home</a></li>
             <li><a href="#inventory" class="nav-link">Inventory</a></li>
@@ -110,14 +123,14 @@
       <div class="hero-background">
         <div class="hero-overlay"></div>
       </div>
-      
+
       <div class="container">
         <div class="hero-content">
           <h1 class="hero-title">
             Find Your Dream Car in Kenya
             <span class="hero-subtitle">Quality vehicles at competitive prices</span>
           </h1>
-          
+
           <div class="hero-stats">
             <div class="stat">
               <span class="stat-number">500+</span>
@@ -142,21 +155,21 @@
                   <option value="">All Makes</option>
                 </select>
               </div>
-              
+
               <div class="form-group">
                 <label for="model" class="form-label">Model</label>
                 <select id="model" name="model" class="form-select">
                   <option value="">All Models</option>
                 </select>
               </div>
-              
+
               <div class="form-group">
                 <label for="year" class="form-label">Year</label>
                 <select id="year" name="year" class="form-select">
                   <option value="">Any Year</option>
                 </select>
               </div>
-              
+
               <div class="form-group">
                 <label for="price-min" class="form-label">Price Range</label>
                 <div class="price-range">
@@ -165,7 +178,7 @@
                   <input type="number" id="price-max" name="price-max" placeholder="Max" class="form-input">
                 </div>
               </div>
-              
+
               <div class="form-group">
                 <label for="fuel-type" class="form-label">Fuel Type</label>
                 <select id="fuel-type" name="fuel-type" class="form-select">
@@ -176,7 +189,7 @@
                   <option value="electric">Electric</option>
                 </select>
               </div>
-              
+
               <div class="form-group">
                 <label for="transmission" class="form-label">Transmission</label>
                 <select id="transmission" name="transmission" class="form-select">
@@ -186,7 +199,7 @@
                 </select>
               </div>
             </div>
-            
+
             <div class="search-actions">
               <button type="submit" class="btn btn-primary btn-large">
                 <i class="fas fa-search"></i>
@@ -211,19 +224,19 @@
             <h3>Financing Calculator</h3>
             <p>Calculate your monthly payments</p>
           </a>
-          
+
           <a href="#services" class="action-card">
             <i class="fas fa-tools"></i>
             <h3>Service Center</h3>
             <p>Professional maintenance & repair</p>
           </a>
-          
+
           <a href="#contact" class="action-card">
             <i class="fas fa-phone"></i>
             <h3>Contact Us</h3>
             <p>Get expert advice today</p>
           </a>
-          
+
           <a href="#inventory" class="action-card">
             <i class="fas fa-car-side"></i>
             <h3>Browse Inventory</h3>
@@ -240,11 +253,11 @@
           <h2>Featured Vehicles</h2>
           <p>Explore our premium selection of quality cars</p>
         </div>
-        
+
         <div class="vehicles-grid" id="featuredVehicles">
           <!-- Vehicles will be loaded here -->
         </div>
-        
+
         <div class="section-footer">
           <button class="btn btn-outline btn-large" id="viewAllVehiclesBtn">
             View All Vehicles
@@ -254,67 +267,67 @@
       </div>
     </section>
 
-                      <!-- Full Inventory Section -->
-                  <section id="inventory" class="inventory">
-                    <div class="container">
-                      <div class="section-header">
-                        <h2>Our Complete Inventory</h2>
-                        <p>Browse through our extensive collection of quality vehicles</p>
-                      </div>
+    <!-- Full Inventory Section -->
+    <section id="inventory" class="inventory">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Complete Inventory</h2>
+          <p>Browse through our extensive collection of quality vehicles</p>
+        </div>
 
-                      <div class="search-results">
-                        <div class="search-results-count">1000 vehicles found</div>
-                      </div>
+        <div class="search-results">
+          <div class="search-results-count">1000 vehicles found</div>
+        </div>
 
-                      <div class="vehicles-grid" id="carGrid">
-                        <!-- All vehicles will be loaded here -->
-                      </div>
-                      
-                      <div class="load-more-container" style="text-align: center; margin-top: 2rem;">
-                        <button class="btn btn-primary btn-large" id="loadMoreBtn" style="display: none;">
-                          <i class="fas fa-plus"></i>
-                          Load More Vehicles
-                        </button>
-                      </div>
-                    </div>
-                  </section>
+        <div class="vehicles-grid" id="carGrid">
+          <!-- All vehicles will be loaded here -->
+        </div>
 
-                  <!-- Inventory Modal -->
-                  <div id="inventoryModal" class="modal">
-                    <div class="modal-content inventory-modal">
-                      <div class="modal-header">
-                        <h2>Complete Vehicle Inventory</h2>
-                        <button class="modal-close" aria-label="Close inventory">
-                          <i class="fas fa-times"></i>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="inventory-header">
-                          <div class="inventory-stats">
-                            <span class="total-cars">1000 Vehicles Available</span>
-                            <span class="showing-cars" id="showingCars">Showing 1-50</span>
-                          </div>
-                          <div class="inventory-actions">
-                            <button class="btn btn-outline" id="clearFiltersBtn">
-                              <i class="fas fa-filter"></i>
-                              Clear Filters
-                            </button>
-                          </div>
-                        </div>
-                        
-                        <div class="inventory-grid" id="inventoryModalGrid">
-                          <!-- Cars will be loaded here -->
-                        </div>
-                        
-                        <div class="load-more-container">
-                          <button class="btn btn-primary btn-large" id="modalLoadMoreBtn">
-                            <i class="fas fa-plus"></i>
-                            Load More Vehicles
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        <div class="load-more-container" style="text-align: center; margin-top: 2rem;">
+          <button class="btn btn-primary btn-large" id="loadMoreBtn" style="display: none;">
+            <i class="fas fa-plus"></i>
+            Load More Vehicles
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inventory Modal -->
+    <div id="inventoryModal" class="modal">
+      <div class="modal-content inventory-modal">
+        <div class="modal-header">
+          <h2>Complete Vehicle Inventory</h2>
+          <button class="modal-close" aria-label="Close inventory">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="inventory-header">
+            <div class="inventory-stats">
+              <span class="total-cars">1000 Vehicles Available</span>
+              <span class="showing-cars" id="showingCars">Showing 1-50</span>
+            </div>
+            <div class="inventory-actions">
+              <button class="btn btn-outline" id="clearFiltersBtn">
+                <i class="fas fa-filter"></i>
+                Clear Filters
+              </button>
+            </div>
+          </div>
+
+          <div class="inventory-grid" id="inventoryModalGrid">
+            <!-- Cars will be loaded here -->
+          </div>
+
+          <div class="load-more-container">
+            <button class="btn btn-primary btn-large" id="modalLoadMoreBtn">
+              <i class="fas fa-plus"></i>
+              Load More Vehicles
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Financing Section -->
     <section id="financing" class="financing">
@@ -323,7 +336,7 @@
           <h2>Financing Solutions</h2>
           <p>Flexible payment options to fit your budget</p>
         </div>
-        
+
         <div class="financing-content">
           <div class="financing-calculator">
             <h3>Payment Calculator</h3>
@@ -338,7 +351,7 @@
                   <input type="number" id="down-payment" class="form-input" value="400000">
                 </div>
               </div>
-              
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="loan-term">Loan Term (Months)</label>
@@ -355,12 +368,12 @@
                   <input type="number" id="interest-rate" class="form-input" value="12" step="0.1">
                 </div>
               </div>
-              
+
               <button type="button" class="btn btn-primary" id="calculate-payment">
                 Calculate Payment
               </button>
             </form>
-            
+
             <div class="payment-result" id="payment-result" style="display: none;">
               <h4>Monthly Payment</h4>
               <div class="payment-amount" id="monthly-payment">KES 0</div>
@@ -380,7 +393,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="financing-benefits">
             <h3>Why Choose Our Financing?</h3>
             <ul class="benefits-list">
@@ -390,7 +403,7 @@
               <li><i class="fas fa-check"></i> No hidden fees</li>
               <li><i class="fas fa-check"></i> Pre-approval available</li>
             </ul>
-            
+
             <div class="cta-buttons">
               <button class="btn btn-primary">Apply Now</button>
               <button class="btn btn-outline">Learn More</button>
@@ -407,7 +420,7 @@
           <h2>Our Services</h2>
           <p>Comprehensive automotive solutions for your needs</p>
         </div>
-        
+
         <div class="services-grid">
           <div class="service-card">
             <div class="service-icon">
@@ -417,7 +430,7 @@
             <p>New and used vehicles from trusted brands with comprehensive warranties.</p>
             <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
-          
+
           <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-tools"></i>
@@ -426,7 +439,7 @@
             <p>Professional maintenance and repair services by certified technicians.</p>
             <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
-          
+
           <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-shield-alt"></i>
@@ -435,7 +448,7 @@
             <p>Comprehensive warranty coverage and insurance solutions for peace of mind.</p>
             <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
-          
+
           <div class="service-card">
             <div class="service-icon">
               <i class="fas fa-exchange-alt"></i>
@@ -455,8 +468,10 @@
           <div class="about-text">
             <h2>About KenyaMotors</h2>
             <p class="lead">Your trusted partner in finding high-quality, affordable cars across Kenya.</p>
-            <p>KenyaMotors has been serving the Kenyan automotive market for over a decade, bringing you a wide range of new and used vehicles sourced locally and internationally. With an emphasis on transparency, reliability, and service excellence, we strive to help you drive your dream car today.</p>
-            
+            <p>KenyaMotors has been serving the Kenyan automotive market for over a decade, bringing you a wide range of
+              new and used vehicles sourced locally and internationally. With an emphasis on transparency, reliability,
+              and service excellence, we strive to help you drive your dream car today.</p>
+
             <div class="about-stats">
               <div class="stat">
                 <span class="stat-number">10+</span>
@@ -471,13 +486,13 @@
                 <span class="stat-label">Happy Customers</span>
               </div>
             </div>
-            
+
             <div class="about-actions">
               <button class="btn btn-primary">Our Story</button>
               <button class="btn btn-outline">Meet Our Team</button>
             </div>
           </div>
-          
+
           <div class="about-image">
             <img src="images/showroom.jpg" alt="KenyaMotors showroom" loading="lazy">
           </div>
@@ -492,7 +507,7 @@
           <h2>What Our Customers Say</h2>
           <p>Real experiences from satisfied customers</p>
         </div>
-        
+
         <div class="testimonials-grid" id="testimonials">
           <!-- Testimonials will be loaded here -->
         </div>
@@ -506,7 +521,7 @@
           <h2>Contact Us</h2>
           <p>We're here to help! Reach out via the form below or visit our showroom.</p>
         </div>
-        
+
         <div class="contact-content">
           <div class="contact-info">
             <div class="contact-item">
@@ -516,7 +531,7 @@
                 <p>123 Mombasa Road, Nairobi, Kenya</p>
               </div>
             </div>
-            
+
             <div class="contact-item">
               <i class="fas fa-phone"></i>
               <div>
@@ -525,7 +540,7 @@
                 <p>+254 733 123456</p>
               </div>
             </div>
-            
+
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
               <div>
@@ -534,7 +549,7 @@
                 <p>sales@kenyamotors.co.ke</p>
               </div>
             </div>
-            
+
             <div class="contact-item">
               <i class="fas fa-clock"></i>
               <div>
@@ -545,7 +560,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="contact-form">
             <form id="contactForm" class="form">
               <div class="form-row">
@@ -558,7 +573,7 @@
                   <input type="email" id="email" name="email" class="form-input" required>
                 </div>
               </div>
-              
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="phone">Phone Number</label>
@@ -576,12 +591,12 @@
                   </select>
                 </div>
               </div>
-              
+
               <div class="form-group">
                 <label for="message">Message *</label>
                 <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
               </div>
-              
+
               <div class="form-group">
                 <label class="checkbox-label">
                   <input type="checkbox" name="newsletter" class="form-checkbox">
@@ -589,7 +604,7 @@
                   Subscribe to our newsletter for updates and special offers
                 </label>
               </div>
-              
+
               <button type="submit" class="btn btn-primary btn-large">
                 <i class="fas fa-paper-plane"></i>
                 Send Message
@@ -615,7 +630,7 @@
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
-        
+
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
@@ -626,7 +641,7 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-section">
           <h4>Services</h4>
           <ul>
@@ -637,7 +652,7 @@
             <li><a href="#">Trade-In</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-section">
           <h4>Contact Info</h4>
           <p><i class="fas fa-map-marker-alt"></i> 123 Mombasa Road, Nairobi</p>
@@ -645,7 +660,7 @@
           <p><i class="fas fa-envelope"></i> support@kenyamotors.co.ke</p>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <div class="footer-bottom-content">
           <p>&copy; 2025 KenyaMotors. All rights reserved.</p>
@@ -686,15 +701,16 @@
   </button>
 
   <!-- Scripts -->
-  <script src="script.js"></script>
-  
+  <script src="script.min.js"></script>
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID');
   </script>
 </body>
+
 </html>
